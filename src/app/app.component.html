@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<!-- <div *ngFor = "let data of data| async " >
+  {{data}}
+ </div>
+ <div>
+   {{data}}
+ </div> -->
+
+ <button (click)="getFromAPI()">GET DATA</button>
+<input type="text" [(ngModel)]="name" (ngModelChange)="search()" placeholder="enter name to search">
+<br/>
+<table class ="table table-bordered">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let d of data">
+      <td>{{d.id}}</td>
+      <td>{{d.name}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 
+ <ul *ngFor="let d of data">
+   <li>{{d.id}}</li>
+   <li>{{d.name}}</li>
+
+ </ul> -->
